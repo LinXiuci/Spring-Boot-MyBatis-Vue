@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    font-style: normal;
+}
+
+#box {
+    width: 85%;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+#demo {
+    width: 580px;
+}
+
+.carousel-indicators {
+    background-color: #17202A;
+    border-radius: 20px;
+}
+
+#watch-box span {
+    display: block;
+}
+
+#watch-box .watch-box-text1 {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: .011em;
+    padding-bottom: 2px;
+    display: block;
+}
+
+#watch-box .watch-box-text2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: .004em;
+    display: block;
+    min-height: 70px;
+}
+
+aside {
+    position: relative;
+    padding: 20px;
+    height: 500px;
+}
+
+#watch-box-2 span {
+    font-size: 21px;
+    line-height: 1.38105;
+    font-weight: 600;
+    letter-spacing: .011em;
+    min-height: 30px;
+    opacity: 1;
+    transition: opacity .25s;
+    padding-top: 4px;
+    margin: 0;
+
+}
+
+#watch-select {
+    width: 450px;
+    height: 45px;
+}
+
+#watch-add {
+    display: block;
+    width: 450px;
+    height: 45px;
+    background-color: #07c;
+    border: none;
+    color: #FBFCFC;
+    border-radius: 5px;
+    position: relative;
+    top: 150px;
+    margin: auto;
+}
+
+.welcome{
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    transform: translate(50px,0px);
+}

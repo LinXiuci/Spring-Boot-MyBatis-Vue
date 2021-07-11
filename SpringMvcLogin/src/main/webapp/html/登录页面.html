@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: black;
+        }
+
+        body {
+            background: url(../img/christian-heitz.jpg) no-repeat fixed center center;
+            background-size:cover;
+        }
+
+        .login-title {
+            font-size: 26px;
+            text-align: center;
+            line-height: 90px;
+            position: relative;
+            color: rgb(255, 255, 255);
+        }
+
+        .login-form {
+            width: 380px;
+            height: 450px;
+
+            background-image: url("/img/星球.png");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            font-size: 12px;
+            border-radius: 50px;
+            box-shadow: 1px 1px 20px 1px #D6DBDF;
+        }
+
+        .login-form-table {
+            border-collapse: collapse;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .login-form-table a{
+            color: rgb(255, 255, 255);
+        }
+
+        .login-form-table tr,
+        td {
+            padding: 15px;
+        }
+
+        .login-form-table span {
+            line-height: 17px;
+            margin-top: 9px;
+        }
+
+        #login-user,
+        #login-password {
+            width: 300px;
+            height: 45px;
+            background-color: #f7f7f7;
+            text-indent: 16px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        #login-submit {
+            width: 300px;
+            height: 45px;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: #2ad181;
+        }
+
+        .login-code-hide span{
+            transform: translate(0px,-5px);
+            color:  #E74C3C;
+        }
+
+        .login-form-table p{
+            display: flex;
+            justify-content: space-between;
+        }
+        .login-code-register a:nth-child(2){
+            color: #2ad181;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form method="POST" action="" class="login-form">
+            <h1 class="login-title">账号登录</h1>
+            <table class="login-form-table">
+                <tr>
+                    <td><input type="text" name="username" id="login-user" placeholder="输入手机号码或邮箱"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" id="login-password" placeholder="请输入密码"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="login-code-hide">
+                            <a href="">忘记密码?</a>
+                            <span>你还没有登录，请登录!</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="login-submit">登录</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="login-code-register"><a href="">隐私政策</a><a href="">注册帐号</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+
+</html>

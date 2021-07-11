@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+body {
+    background: url(../img/christian-heitz.jpg) no-repeat fixed center center;
+    background-size:cover;
+}
+
+.login-title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 90px;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.login-form {
+    width: 380px;
+    height: 450px;
+
+    background-image: url(/img/星球.png);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    font-size: 12px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 20px 1px #D6DBDF;
+}
+
+.login-form-table {
+    border-collapse: collapse;
+    position: relative;
+    margin: 10px auto;
+}
+
+.login-form-table a{
+    color: rgb(255, 255, 255);
+}
+
+.login-form-table tr, td {
+    padding: 15px;
+}
+
+.login-form-table span {
+    line-height: 17px;
+    margin-top: 9px;
+}
+
+#login-user,
+#login-password {
+    width: 300px;
+    height: 45px;
+    background-color: #f7f7f7;
+    text-indent: 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+#login-submit {
+    width: 300px;
+    height: 45px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #2ad181;
+}
+
+
+.login-code-hide span{
+    transform: translate(0px,-7px);
+    color:  #E74C3C;
+}
+
+.login-form-table p{
+    display: flex;
+    justify-content: space-between;
+}
+.login-code-register a:nth-child(2){
+    color: #2ad181;
+}
