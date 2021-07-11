@@ -1,0 +1,4 @@
+com\controller\BookController.class
+com\FrontAlterDemo1Application.class
+com\repository\BookRepository.class
+com\entity\BookBean.class
