@@ -1,0 +1,7 @@
+com\controller\LoginController.class
+com\controller\TestController.class
+com\dao\UserDao.class
+com\config\CorsConfig.class
+com\entity\User.class
+com\PersonalHealthAlterApplication.class
+com\service\UserService.class

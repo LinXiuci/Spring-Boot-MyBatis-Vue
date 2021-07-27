@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 本映射文件对应MainMenu接口 -->
+<mapper namespace="com.dao.MainMenuDao">
+
+    <resultMap id="MainMenuMap" type="com.entity.MainMenu">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="path" column="path" />
+        <collection property="subMenuslList" ofType="com.entity.SubMenu">
+            <id property="id" column="sm_id" />
+            <result property="title" column="sm_title" />
+            <result property="path" column="sm_path" />
+        </collection>
+    </resultMap>
+
+    <resultMap id="SubMenu" type="com.entity.SubMenu">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="path" column="path" />
+    </resultMap>
+
+    <sql id="MainMenuSQL">
+        <!--  -->
+        select id,title,path,mid from mainmenu
+    </sql>
+
+    <select id="getMains" resultMap="MainMenuMap">
+        select 
+            mm.*, 
+            sm.id as sm_id, 
+            sm.title as sm_title, 
+            sm.path as sm_path 
+        from 
+            submenu sm,
+            mainmenu mm 
+        where sm.mid=mm.id
+    </select>
+</mapper>

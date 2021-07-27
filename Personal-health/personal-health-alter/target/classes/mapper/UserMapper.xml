@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 本映射文件对应USerDao接口 -->
+<mapper namespace="com.dao.UserDao">
+    <resultMap id="UserMap" type="com.entity.User">
+        <result property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+        <result property="email" column="email" />
+        <result property="role" column="role" />
+        <result property="state" column="state" />
+    </resultMap>
+
+
+    <sql id="UserSQL">
+        <!--  -->
+        select id,username,password,email,role,state from user
+    </sql>
+
+    <sql id="easyuserSQL">
+        select * from easyuser
+    </sql>
+
+    <select id="getUserByMassage" resultMap="UserMap">
+        <include refid="UserSQL" />
+        where username=#{username} and password=#{password} and state=1
+    </select>
+
+    <select id="getUserAll" resultMap="UserMap">
+        <include refid="easyuserSQL" />
+        <if test="username != null">
+            where username like #{username}
+        </if>
+        limit #{pageStart},#{pageSize}
+    </select>
+
+    <select id="getUserCounts" resultType="Integer">
+        select count(*) from easyuser
+        <if test="username != null">
+            where username like #{username}
+        </if>
+    </select>
+
+    <select id="getUpdateUser" resultMap="UserMap">
+        <include refid="easyuserSQL" />
+        where id = #{id}
+    </select>
+
+    <update id="updateState">
+        update easyuser set state = #{state} where id = #{id}
+    </update>
+
+    <insert id="addUser">
+        INSERT INTO easyuser
+        (username,password,email,role,state)
+        VALUE
+        (#{username},#{password},#{email},#{role},#{state})
+    </insert>
+
+    <update id="editUser">
+        UPDATE easyuser SET username = #{username} , password = #{password} ,
+        email = #{email} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM easyuser WHERE id = #{id}
+    </delete>
+</mapper>
